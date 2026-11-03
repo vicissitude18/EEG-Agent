@@ -1,8 +1,8 @@
 # 基于脑电的疑似癫痫发作区间筛查智能体设计和云端实践
 
-这是一个工程实践 B 项目。程序从多导联脑电提取时域、频谱和跨导联证据，Qwen3-8B 据此筛查疑似癫痫发作区间。云端预演在 AMD AUP 的 Radeon AI PRO R9700（32 GB）上完成。
+这个程序从多导联脑电提取时域、频谱和跨导联证据，Qwen3-8B 据此筛查疑似癫痫发作区间。云端预演在 AMD AUP 的 Radeon AI PRO R9700（32 GB）上完成。
 
-最终评测覆盖 3 名患者的 6 段记录，每段 20 分钟。严格疑似结果为命中 2 次、误报 2 次、漏检 1 次，事件精确率 50.0%、召回率 66.7%、F1 57.1%。这组成绩来自关闭知识库检索的预演版本。
+最终评测覆盖 3 名患者的 6 段记录，每段 20 分钟。严格疑似结果为命中 2 次、误报 2 次、漏检 1 次，事件精确率 50.0%、召回率 66.7%、F1 57.1%。这组成绩来自预演版本。
 
 - [结果、六例时间线和候选证据卡](结果与当前问题.md)
 - [可回放的 Notebook](demo_v2.ipynb)
@@ -40,7 +40,7 @@
 
 `refine_v2.py`对全部满足数值最低支持、但仍不确定的候选做一次局部与边界复核，只读取已保存测量，不读取答案或分数，也不重新计算信号特征。结果另存`results/final`，原始判断和复核轨迹均保留。它不保证追回漏检，实际结果见score.json。
 
-`EvidenceAgent.run`直接继承EEGAgent，测量通过原始handle_tool_calls分发器执行；新增工具实现原创，官方事件评分来自EEGAgentBench。当前不是原始benchmark工具设置下的排行榜复现。本轮与旧版使用不同数据，不据此声称误报/漏检率已经下降。
+`EvidenceAgent.run`直接继承EEGAgent，测量通过原始handle_tool_calls分发器执行；新增工具实现原创，官方事件评分来自EEGAgentBench。当前不是原始benchmark工具设置下的排行榜复现。
 
 ## AUP运行
 
@@ -67,12 +67,3 @@ python3 render_v2.py --output final-replay
 结束后在AUP主页Stop My Server。只回放已保存结果可用CPU环境。
 
 HTML使用相对图片资源，需要保留完整目录后打开；Notebook已保存输出。紧凑交付包保留最终全部局部PNG及主结果总览；fixed阶段原始测量、模型输出和证据卡完整保留，可在AUP重新绘图。
-
-## 来源与授权
-
-- EEGAgent：https://github.com/rebootingLine/EEGAgent
-- EEGAgentBench：https://github.com/528why/EEGAgentBenchmark
-- CHB-MIT：https://physionet.org/content/chbmit/1.0.0/
-- Qwen3-8B：https://huggingface.co/Qwen/Qwen3-8B
-
-固定commit见sources.json；MIT仅覆盖原创适配代码。公开包不含vendor、原始信号、权重、账号口令或教师原始文档。
