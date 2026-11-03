@@ -1,0 +1,62 @@
+[
+  {
+    "case": 1,
+    "candidate_id": "C2",
+    "status": "completed",
+    "trace": "boundary_reviews/case_01_C2/trace.json",
+    "stats": {
+      "model_calls": 2,
+      "tool_dispatches": 0,
+      "measurements_executed": 0,
+      "cache_hits": 0,
+      "invalid_calls": 0,
+      "submission_rejections": 0
+    },
+    "decision": "uncertain",
+    "interval": [
+      160.0,
+      305.0
+    ],
+    "elapsed_seconds": 30.317521810531616
+  },
+  {
+    "case": 1,
+    "candidate_id": "C4",
+    "status": "completed",
+    "trace": "boundary_reviews/case_01_C4/trace.json",
+    "stats": {
+      "model_calls": 2,
+      "tool_dispatches": 0,
+      "measurements_executed": 0,
+      "cache_hits": 0,
+      "invalid_calls": 0,
+      "submission_rejections": 0
+    },
+    "decision": "uncertain",
+    "interval": [
+      475.0,
+      655.0
+    ],
+    "elapsed_seconds": 20.84195899963379
+  },
+  {
+    "case": 6,
+    "candidate_id": "C1",
+    "status": "completed",
+    "trace": "boundary_reviews/case_06_C1/trace.json",
+    "stats": {
+      "model_calls": 2,
+      "tool_dispatches": 0,
+      "measurements_executed": 0,
+      "cache_hits": 0,
+      "invalid_calls": 0,
+      "submission_rejections": 0
+    },
+    "decision": "uncertain",
+    "interval": [
+      110.0,
+      145.0
+    ],
+    "elapsed_seconds": 31.042019605636597
+  }
+]

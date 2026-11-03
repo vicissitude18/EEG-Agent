@@ -1,0 +1,47 @@
+"""Create a concise results handoff from the corrected saved runs."""
+import json
+from paths import ROOT
+def main():
+    s=json.loads((ROOT/'results/final/score.json').read_text());e=json.loads((ROOT/'results/final/environment.json').read_text());base=json.loads((ROOT/'results/fixed/score.json').read_text())
+    q=s['inclusive_review_queue'];n=s['candidate_decisions']['uncertain'];stats=s['tool_statistics']
+    lines=['# 多患者20分钟EEG预演：结果与当前问题\n',
+      '本轮输入为3名患者的6段公开脑电，每段1200秒，共2小时。每人一段含发作区域和一段背景区域，按公开标注定向选取；不是随机盲测或完整EEGAgentBench评测。\n',
+      '## 最终结果\n',
+      f"六例完成{s['completed']}/{s['n']}；严格疑似结果：TP={s['tp']}、FP={s['fp']}、FN={s['fn']}；事件F1={s['event_based_f1']:.3f}；按本组时长归一化FP/小时={s['fp_per_hour']:.3f}；阳性片段平均Dice-S={s['dice_s_positive_clips']:.3f}。\n",
+      f"仍有{n}条不确定候选。把疑似和不确定全部放入人工复核队列时，事件TP/FP/FN={q['tp']}/{q['fp']}/{q['fn']}。不确定没有作为严格阳性计分，因此不能只看严格FP数量就认为人工复核负担已经下降。\n",
+      '![全部六例](results/final/timeline_v2.png)\n',
+      '绿色为参考，橙色为严格疑似，紫色为不确定。横轴为片段内分钟；蓝线是线长相对自身背景的变化量，不是模型概率。各图纵轴尺度不同。\n',
+      '|案例|患者|参考区间/片段秒|严格疑似区间/片段秒|TP/FP/FN|不确定候选数|\n|---|---|---|---|---|---|']
+    for c in s['cases']:
+        pred=[(v['onset_sec'],v['offset_sec']) for v in c['prediction']['seizure_events']]
+        count='/'.join(str(c['event_metrics'][k]) for k in ['tp','fp','fn'])
+        lines.append(f"|{c['case']:02d}|{c['subject']}|{c['reference_events']}|{pred}|{count}|{len(c['prediction']['uncertain_candidates'])}|")
+    lines+=['\n时间从各片段起点计，不是原始EDF时间。事件匹配采用冻结评分代码的起点30秒、终点60秒等容差及事件合并规则；事件命中不代表起止边界精确，需结合Dice和区间图。\n',
+      '## 候选与证据对应\n',
+      f"本轮共保留{sum(c['candidate_count'] for c in s['cases'])}条候选，包含保留、排除及不确定的全部决定。每条都有时域、频谱、跨通道证据ID，以及候选前/中/后的局部测量。\n",
+      '说明字段与证据编号独立；已修复schema对象共享导致的enum污染，并加入回归检查。正确编号只能证明引用来源对应，不能证明模型解释正确。\n',
+      '|案例|候选|决定|三类证据与原始数值|\n|---|---|---|---|']
+    for c in s['cases']:
+        for d in c['prediction']['candidates']:
+            path=f"results/final/case_{c['case']:02d}/{d['candidate_id']}_证据卡.md"
+            lines.append(f"|{c['case']:02d}|{d['candidate_id']}|{d['decision']}|[证据卡]({path})|")
+    lines+=['\n## 本次观察与下一步\n',
+      f"完整候选阶段覆盖参考事件{s['candidate_screen_reference_coverage']['hits']}/{s['candidate_screen_reference_coverage']['reference_events']}；这一数字是事后核对，不进入Agent。"]
+    if s['fn']:
+        missed=[str(c['case']).zfill(2) for c in s['cases'] if c['event_metrics']['fn']]
+        lines.append('严格疑似仍有漏检，位于案例'+', '.join(missed)+'。优先检查其候选是否已被扫描覆盖，再区分模型判断、数值门槛及边界定位的问题；不能直接通过放宽阈值宣称解决漏检。')
+    if s['fp']:
+        false=[str(c['case']).zfill(2) for c in s['cases'] if c['event_metrics']['fp']]
+        lines.append('仍有误报，位于案例'+', '.join(false)+'。下一步检查背景活动与伪迹解释、共享电极相关性，以及片段边缘是否缺少前后背景。')
+    lines += ['先让模型逐个指出哪些5秒窗支持结论，再收束边界；数值变化只作为测量支持，不能充当发作真值。需要使用新的固定患者/片段做独立核对，才能评价后续策略是否泛化。\n',
+      '## 工具与资源\n',
+      '```json\n'+json.dumps(stats,ensure_ascii=False,indent=2)+'\n```',
+      'model_calls是模型生成次数；tool_dispatches含候选登记；measurements_executed是整段扫描及局部测量调用次数，局部一次返回三类证据。cache_hits为实际重复测量缓存命中数；缓存机制通过预检，不代表本次实际节省了某个百分比算力。\n',
+      f"推理使用Qwen3-8B、AMD R9700。完成路径累计分析{e['analysis_seconds']:.1f}秒；冷加载累计{e['model_load_seconds']:.1f}秒；峰值torch分配{e['peak_torch_memory_bytes']/1024**3:.2f}GiB。若有第二次边界复核加载，以上已经合并，不包含早期调试轮、下载、部署与空闲计时。\n",
+      '## 结果可信范围\n',
+      '只展示修复字段隔离后的fixed/final。早期main、guarded、refined调试轮存在schema错误，保留在AUP及工作目录，不能用其分数比较模型能力或宣称误报从某个数值下降。本轮没有做正式baseline比较。\n',
+      f"fixed阶段TP/FP/FN={base['tp']}/{base['fp']}/{base['fn']}；追加一次受限局部复核后的final={s['tp']}/{s['fp']}/{s['fn']}。这是同一开发样本上的处理过程，不是独立测试。\n",
+      '具体的数值混用、方向错误、共享电极误读和下一轮设计见[证据审阅与改进规划.md](证据审阅与改进规划.md)。模型自由文字尚未通过逐项事实认证。\n',
+      '课堂发言稿见[课堂发言稿.md](课堂发言稿.md)，实际回放入口为[demo_v2.ipynb](demo_v2.ipynb)。完整结课报告及GitHub发布按用户安排后续处理。']
+    (ROOT/'结果与当前问题.md').write_text('\n'.join(lines),encoding='utf-8');print('RESULT_HANDOFF_READY')
+if __name__=='__main__':main()

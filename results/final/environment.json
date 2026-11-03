@@ -1,0 +1,29 @@
+{
+  "model": "Qwen3-8B",
+  "model_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+  "gpu": "AMD Radeon AI PRO R9700",
+  "torch": "2.9.1+rocm7.13.0",
+  "model_load_seconds": 155.16453051567078,
+  "max_rounds": 24,
+  "inherited_run": true,
+  "schema_alias_fix": true,
+  "guarded": true,
+  "max_new_tokens": 768,
+  "max_context_tokens": 24576,
+  "code_sha256": {
+    "run_v2.py": "fec5a74f089e6ada7ba1f9b7c340c77cbde31a9f751382244c9c80263d88a8e6",
+    "evidence_tools.py": "7bb44c4ddcae293ece2e9287f40a4254449c1aa221c779c66225da838e3c2383",
+    "local_qwen.py": "b16f11908cbc4866add2f4d03b7e13bed4ffe2502e11664ec880090773bf7857",
+    "support_policy.py": "124db5c5e9ec858ee75d6356c69238842a93da278eacd3f5cd312c5f9a39d0e0",
+    "schema_utils.py": "c55307f9405411db695704b7b665446261087764daa7a8ac182fc544db8786bd",
+    "refine_v2.py": "73374af158db2a7acec81a5b40ae7106681f7f1f208629a34fcbc7de4939febd"
+  },
+  "baseline_comparison": false,
+  "policy": "Full numerical scan + fixed broad change seeds + 0-2 agent additions; mandatory local three-family evidence; bounded stage memory. Optional numeric evidence-sufficiency gate retains weak positives as uncertain.",
+  "analysis_seconds": 654.4898774623871,
+  "peak_torch_memory_bytes": 18242205696,
+  "parent_run": "fixed",
+  "boundary_review_count": 3,
+  "boundary_review_analysis_seconds": 82.201500415802,
+  "boundary_review_model_load_seconds": 77.59659433364868
+}

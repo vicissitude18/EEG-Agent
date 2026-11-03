@@ -1,0 +1,9 @@
+vendor/
+data/
+models/
+__pycache__/
+.env
+cloud_export.txt
+cloud_export_t5.txt
+*.partial
+*.zip

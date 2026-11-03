@@ -1,0 +1,6 @@
+{
+  "source": "results/fixed",
+  "selection": "All numeric-supported uncertain candidates; no reference annotations or scores read",
+  "original_case_trace": "Each case trace.json remains the source pass. New boundary review traces are linked from decisions and boundary_reviews/",
+  "resource_accounting": "environment totals combine source analysis and boundary recovery; model cold loads are included, not earlier debugging runs."
+}

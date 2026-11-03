@@ -1,0 +1,135 @@
+{
+  "seizure_events": [],
+  "uncertain_candidates": [
+    "C4"
+  ],
+  "candidates": [
+    {
+      "candidate_id": "C4",
+      "decision": "uncertain",
+      "onset_sec": 475.0,
+      "offset_sec": 655.0,
+      "temporal_evidence_id": "C4.temporal",
+      "spectral_evidence_id": "C4.spectral",
+      "cross_channel_evidence_id": "C4.cross_channel",
+      "temporal_reason": "The temporal evidence shows a sustained increase in RMS and line length ratios across multiple channels during the interval [475.0, 655.0]. However, the changes are not consistently sustained across the entire interval, with some periods showing a return to baseline levels. The temporal evidence does not show a clear, sustained evolution that would support a seizure.",
+      "spectral_reason": "The spectral evidence indicates a shift in the dominant frequency and changes in spectral entropy and peak fraction during the interval. However, these changes are not consistently sustained across the entire interval, and the spectral changes do not show a clear, rhythmic evolution that would support a seizure. The spectral evidence is not sufficient to confirm a seizure.",
+      "cross_channel_reason": "The cross-channel evidence shows some correlation changes during the interval, but these changes are not consistent across all channels. The correlation changes are not sufficient to confirm a seizure. Shared electrodes can create correlation, and focal seizures need not be globally synchronous.",
+      "evolution_supported": false,
+      "context_contrast": false,
+      "artifact_suspected": false,
+      "alternative_explanation": "The changes observed could be due to physiological state changes or artifacts. The evidence does not show a clear, sustained evolution that would support a seizure. The changes are not specific to seizure activity and could be due to other factors.",
+      "evidence_file": "C4_evidence.json",
+      "proposed_interval": [
+        475.0,
+        655.0
+      ],
+      "review_interval": [
+        415.0,
+        715.0
+      ],
+      "origin": "fixed_broad_change_screen",
+      "measurement_support": {
+        "policy": {
+          "min_line_length_ratio": 2.0,
+          "min_rms_ratio": 1.5,
+          "min_changed_leads": 2,
+          "min_peak_fraction": 0.2,
+          "max_entropy": 0.85,
+          "min_consecutive_support_sec": 15.0,
+          "min_support_fraction": 0.2,
+          "minimum_model_interval_sec": 10.0
+        },
+        "meets_minimum_measurement_support": true,
+        "longest_support_run_sec": 40.0,
+        "total_support_sec": 75.0,
+        "support_fraction": 0.4167,
+        "support_bins": [
+          [
+            575.0,
+            580.0
+          ],
+          [
+            580.0,
+            585.0
+          ],
+          [
+            585.0,
+            590.0
+          ],
+          [
+            590.0,
+            595.0
+          ],
+          [
+            595.0,
+            600.0
+          ],
+          [
+            600.0,
+            605.0
+          ],
+          [
+            605.0,
+            610.0
+          ],
+          [
+            615.0,
+            620.0
+          ],
+          [
+            620.0,
+            625.0
+          ],
+          [
+            625.0,
+            630.0
+          ],
+          [
+            630.0,
+            635.0
+          ],
+          [
+            635.0,
+            640.0
+          ],
+          [
+            640.0,
+            645.0
+          ],
+          [
+            645.0,
+            650.0
+          ],
+          [
+            650.0,
+            655.0
+          ]
+        ],
+        "allowed_decisions": [
+          "suspected",
+          "rejected",
+          "uncertain"
+        ],
+        "meaning": "A fixed engineering evidence-sufficiency check, not seizure truth. Passing does not establish a seizure; failure can occur in real focal/low-amplitude events. Rejected and uncertain candidates remain visible."
+      },
+      "raw_model_assessment": {
+        "candidate_id": "C4",
+        "decision": "uncertain",
+        "onset_sec": 475.0,
+        "offset_sec": 655.0,
+        "temporal_evidence_id": "C4.temporal",
+        "spectral_evidence_id": "C4.spectral",
+        "cross_channel_evidence_id": "C4.cross_channel",
+        "temporal_reason": "The temporal evidence shows a sustained increase in RMS and line length ratios across multiple channels during the interval [475.0, 655.0]. However, the changes are not consistently sustained across the entire interval, with some periods showing a return to baseline levels. The temporal evidence does not show a clear, sustained evolution that would support a seizure.",
+        "spectral_reason": "The spectral evidence indicates a shift in the dominant frequency and changes in spectral entropy and peak fraction during the interval. However, these changes are not consistently sustained across the entire interval, and the spectral changes do not show a clear, rhythmic evolution that would support a seizure. The spectral evidence is not sufficient to confirm a seizure.",
+        "cross_channel_reason": "The cross-channel evidence shows some correlation changes during the interval, but these changes are not consistent across all channels. The correlation changes are not sufficient to confirm a seizure. Shared electrodes can create correlation, and focal seizures need not be globally synchronous.",
+        "evolution_supported": false,
+        "context_contrast": false,
+        "artifact_suspected": false,
+        "alternative_explanation": "The changes observed could be due to physiological state changes or artifacts. The evidence does not show a clear, sustained evolution that would support a seizure. The changes are not specific to seizure activity and could be due to other factors."
+      }
+    }
+  ],
+  "boundary_scan_sec": 5
+}

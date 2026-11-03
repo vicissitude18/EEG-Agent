@@ -1,0 +1,10 @@
+{
+  "EEGAgent": {
+    "repository": "https://github.com/rebootingLine/EEGAgent",
+    "commit": "7ababeaeebe7a89db64eb443d25ddecc280210f0"
+  },
+  "EEGAgentBenchmark": {
+    "repository": "https://github.com/528why/EEGAgentBenchmark",
+    "commit": "279601a3b689437f2484f50b025ea0fefcbb83ef"
+  }
+}

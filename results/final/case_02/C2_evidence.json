@@ -1,0 +1,585 @@
+{
+  "candidate_id": "C2",
+  "proposed_interval": [
+    295.0,
+    325.0
+  ],
+  "review_interval": [
+    235.0,
+    385.0
+  ],
+  "channel_selection": "Top4 leads by candidate median LL ratio * sqrt(RMS ratio), using adjacent before/after windows as background; no annotation involved.",
+  "channels": [
+    "FP1-F3",
+    "FP2-F8",
+    "FP2-F4",
+    "FZ-CZ"
+  ],
+  "evidence_ids": {
+    "temporal": "C2.temporal",
+    "spectral": "C2.spectral",
+    "cross_channel": "C2.cross_channel"
+  },
+  "temporal": {
+    "local_ratios": {
+      "FP1-F3": {
+        "rms_ratio": 1.0427,
+        "line_length_ratio": 1.5684
+      },
+      "FP2-F8": {
+        "rms_ratio": 1.1555,
+        "line_length_ratio": 1.4229
+      },
+      "FP2-F4": {
+        "rms_ratio": 0.9953,
+        "line_length_ratio": 1.4185
+      },
+      "FZ-CZ": {
+        "rms_ratio": 1.135,
+        "line_length_ratio": 1.2151
+      }
+    }
+  },
+  "spectral": {
+    "before": {
+      "FP1-F3": {
+        "rms_uv": 60.2367,
+        "line_length_uv_s": 1095.6829,
+        "delta_rel": 0.7505,
+        "theta_rel": 0.1203,
+        "alpha_rel": 0.0122,
+        "beta_rel": 0.0177,
+        "gamma_rel": 0.0091,
+        "dominant_hz": 2.0,
+        "spectral_entropy": 0.554,
+        "peak_fraction": 0.6196,
+        "kurtosis": 5.8383
+      },
+      "FP2-F8": {
+        "rms_uv": 65.8762,
+        "line_length_uv_s": 1056.5348,
+        "delta_rel": 0.716,
+        "theta_rel": 0.1165,
+        "alpha_rel": 0.013,
+        "beta_rel": 0.0198,
+        "gamma_rel": 0.0126,
+        "dominant_hz": 2.0,
+        "spectral_entropy": 0.5249,
+        "peak_fraction": 0.6918,
+        "kurtosis": 5.0706
+      },
+      "FP2-F4": {
+        "rms_uv": 56.9209,
+        "line_length_uv_s": 1378.2822,
+        "delta_rel": 0.7271,
+        "theta_rel": 0.1234,
+        "alpha_rel": 0.0191,
+        "beta_rel": 0.0329,
+        "gamma_rel": 0.0188,
+        "dominant_hz": 2.0,
+        "spectral_entropy": 0.5911,
+        "peak_fraction": 0.5909,
+        "kurtosis": 5.468
+      },
+      "FZ-CZ": {
+        "rms_uv": 14.8667,
+        "line_length_uv_s": 384.4536,
+        "delta_rel": 0.7228,
+        "theta_rel": 0.1549,
+        "alpha_rel": 0.0226,
+        "beta_rel": 0.0303,
+        "gamma_rel": 0.01,
+        "dominant_hz": 2.0,
+        "spectral_entropy": 0.5821,
+        "peak_fraction": 0.5747,
+        "kurtosis": 2.4553
+      }
+    },
+    "during": {
+      "FP1-F3": {
+        "rms_uv": 65.2756,
+        "line_length_uv_s": 2387.7138,
+        "delta_rel": 0.774,
+        "theta_rel": 0.0746,
+        "alpha_rel": 0.0083,
+        "beta_rel": 0.0288,
+        "gamma_rel": 0.0184,
+        "dominant_hz": 2.0,
+        "spectral_entropy": 0.5293,
+        "peak_fraction": 0.6494,
+        "kurtosis": 3.8612
+      },
+      "FP2-F8": {
+        "rms_uv": 82.1467,
+        "line_length_uv_s": 1953.5104,
+        "delta_rel": 0.783,
+        "theta_rel": 0.0831,
+        "alpha_rel": 0.0092,
+        "beta_rel": 0.0185,
+        "gamma_rel": 0.0107,
+        "dominant_hz": 2.0,
+        "spectral_entropy": 0.5217,
+        "peak_fraction": 0.6845,
+        "kurtosis": 2.6954
+      },
+      "FP2-F4": {
+        "rms_uv": 62.3685,
+        "line_length_uv_s": 2320.3796,
+        "delta_rel": 0.7321,
+        "theta_rel": 0.0734,
+        "alpha_rel": 0.0098,
+        "beta_rel": 0.034,
+        "gamma_rel": 0.029,
+        "dominant_hz": 2.0,
+        "spectral_entropy": 0.5599,
+        "peak_fraction": 0.5887,
+        "kurtosis": 3.9477
+      },
+      "FZ-CZ": {
+        "rms_uv": 18.1712,
+        "line_length_uv_s": 519.8012,
+        "delta_rel": 0.7746,
+        "theta_rel": 0.118,
+        "alpha_rel": 0.0126,
+        "beta_rel": 0.0188,
+        "gamma_rel": 0.0094,
+        "dominant_hz": 2.0,
+        "spectral_entropy": 0.5375,
+        "peak_fraction": 0.6167,
+        "kurtosis": 1.2387
+      }
+    },
+    "after": {
+      "FP1-F3": {
+        "rms_uv": 75.4447,
+        "line_length_uv_s": 2182.6674,
+        "delta_rel": 0.684,
+        "theta_rel": 0.092,
+        "alpha_rel": 0.0124,
+        "beta_rel": 0.021,
+        "gamma_rel": 0.0145,
+        "dominant_hz": 2.0,
+        "spectral_entropy": 0.5704,
+        "peak_fraction": 0.6167,
+        "kurtosis": 4.0896
+      },
+      "FP2-F8": {
+        "rms_uv": 76.6136,
+        "line_length_uv_s": 1768.2811,
+        "delta_rel": 0.7334,
+        "theta_rel": 0.0815,
+        "alpha_rel": 0.0099,
+        "beta_rel": 0.018,
+        "gamma_rel": 0.0104,
+        "dominant_hz": 2.0,
+        "spectral_entropy": 0.5767,
+        "peak_fraction": 0.6151,
+        "kurtosis": 3.3265
+      },
+      "FP2-F4": {
+        "rms_uv": 72.0975,
+        "line_length_uv_s": 2027.7736,
+        "delta_rel": 0.7078,
+        "theta_rel": 0.0956,
+        "alpha_rel": 0.0126,
+        "beta_rel": 0.0252,
+        "gamma_rel": 0.0131,
+        "dominant_hz": 2.0,
+        "spectral_entropy": 0.5512,
+        "peak_fraction": 0.637,
+        "kurtosis": 3.4343
+      },
+      "FZ-CZ": {
+        "rms_uv": 18.7252,
+        "line_length_uv_s": 529.7403,
+        "delta_rel": 0.7257,
+        "theta_rel": 0.1294,
+        "alpha_rel": 0.0225,
+        "beta_rel": 0.0171,
+        "gamma_rel": 0.0087,
+        "dominant_hz": 2.0,
+        "spectral_entropy": 0.549,
+        "peak_fraction": 0.6728,
+        "kurtosis": 2.7046
+      }
+    }
+  },
+  "cross_channel": {
+    "pairwise_correlations": [
+      {
+        "channels": [
+          "FP1-F3",
+          "FP2-F8"
+        ],
+        "before": 0.8974,
+        "during": 0.8746,
+        "after": 0.85,
+        "shared_electrode": false
+      },
+      {
+        "channels": [
+          "FP1-F3",
+          "FP2-F4"
+        ],
+        "before": 0.9655,
+        "during": 0.9406,
+        "after": 0.9568,
+        "shared_electrode": false
+      },
+      {
+        "channels": [
+          "FP1-F3",
+          "FZ-CZ"
+        ],
+        "before": 0.8578,
+        "during": 0.7789,
+        "after": 0.8829,
+        "shared_electrode": false
+      },
+      {
+        "channels": [
+          "FP2-F8",
+          "FP2-F4"
+        ],
+        "before": 0.8632,
+        "during": 0.8614,
+        "after": 0.8364,
+        "shared_electrode": true
+      },
+      {
+        "channels": [
+          "FP2-F8",
+          "FZ-CZ"
+        ],
+        "before": 0.7921,
+        "during": 0.7209,
+        "after": 0.814,
+        "shared_electrode": false
+      },
+      {
+        "channels": [
+          "FP2-F4",
+          "FZ-CZ"
+        ],
+        "before": 0.8473,
+        "during": 0.7806,
+        "after": 0.8854,
+        "shared_electrode": false
+      }
+    ],
+    "caution": "Shared electrodes can create correlation. Correlation alone is not seizure evidence; focal seizures need not be globally synchronous."
+  },
+  "time_series_columns": [
+    "start",
+    "end",
+    "LL_ratio_p50",
+    "RMS_ratio_p50",
+    "dominant_hz_p50",
+    "entropy_p50",
+    "peak_fraction_p50",
+    "changed_selected_leads"
+  ],
+  "time_series": [
+    [
+      235.0,
+      240.0,
+      0.3525,
+      0.5393,
+      2.75,
+      0.7192,
+      0.527,
+      0
+    ],
+    [
+      240.0,
+      245.0,
+      0.5706,
+      1.225,
+      2.25,
+      0.4371,
+      0.8293,
+      0
+    ],
+    [
+      245.0,
+      250.0,
+      0.6953,
+      1.3872,
+      2.0,
+      0.5015,
+      0.6741,
+      0
+    ],
+    [
+      250.0,
+      255.0,
+      0.9698,
+      1.5829,
+      2.0,
+      0.5276,
+      0.6171,
+      0
+    ],
+    [
+      255.0,
+      260.0,
+      1.1399,
+      1.2184,
+      2.0,
+      0.5572,
+      0.637,
+      0
+    ],
+    [
+      260.0,
+      265.0,
+      1.583,
+      0.6998,
+      2.5,
+      0.7076,
+      0.4804,
+      0
+    ],
+    [
+      265.0,
+      270.0,
+      1.2351,
+      0.9846,
+      2.0,
+      0.5672,
+      0.5938,
+      0
+    ],
+    [
+      270.0,
+      275.0,
+      0.8136,
+      0.8522,
+      2.0,
+      0.5336,
+      0.6702,
+      0
+    ],
+    [
+      275.0,
+      280.0,
+      0.9405,
+      0.9538,
+      2.0,
+      0.5845,
+      0.5082,
+      0
+    ],
+    [
+      280.0,
+      285.0,
+      0.7873,
+      0.9286,
+      2.0,
+      0.4652,
+      0.7229,
+      0
+    ],
+    [
+      285.0,
+      290.0,
+      0.6494,
+      0.4153,
+      2.0,
+      0.6676,
+      0.4203,
+      0
+    ],
+    [
+      290.0,
+      295.0,
+      0.6167,
+      0.5656,
+      3.0,
+      0.7305,
+      0.5666,
+      0
+    ],
+    [
+      295.0,
+      300.0,
+      0.8217,
+      0.9174,
+      2.0,
+      0.5297,
+      0.6075,
+      0
+    ],
+    [
+      300.0,
+      305.0,
+      0.8962,
+      1.1377,
+      2.0,
+      0.4552,
+      0.7329,
+      0
+    ],
+    [
+      305.0,
+      310.0,
+      1.2963,
+      1.1292,
+      2.0,
+      0.5657,
+      0.5872,
+      0
+    ],
+    [
+      310.0,
+      315.0,
+      1.7897,
+      1.6059,
+      2.0,
+      0.4758,
+      0.7041,
+      1
+    ],
+    [
+      315.0,
+      320.0,
+      1.5465,
+      0.9998,
+      2.0,
+      0.5565,
+      0.574,
+      0
+    ],
+    [
+      320.0,
+      325.0,
+      1.452,
+      0.7466,
+      2.0,
+      0.5905,
+      0.6587,
+      0
+    ],
+    [
+      325.0,
+      330.0,
+      1.132,
+      0.3573,
+      2.0,
+      0.931,
+      0.1478,
+      0
+    ],
+    [
+      330.0,
+      335.0,
+      1.6973,
+      1.6118,
+      2.5,
+      0.4091,
+      0.9168,
+      0
+    ],
+    [
+      335.0,
+      340.0,
+      1.3965,
+      1.8974,
+      2.5,
+      0.5718,
+      0.6271,
+      0
+    ],
+    [
+      340.0,
+      345.0,
+      0.7819,
+      1.336,
+      2.0,
+      0.4721,
+      0.7438,
+      0
+    ],
+    [
+      345.0,
+      350.0,
+      1.209,
+      1.369,
+      2.5,
+      0.5117,
+      0.8106,
+      0
+    ],
+    [
+      350.0,
+      355.0,
+      1.2709,
+      1.2645,
+      2.0,
+      0.608,
+      0.4781,
+      0
+    ],
+    [
+      355.0,
+      360.0,
+      2.3997,
+      1.1159,
+      2.0,
+      0.7753,
+      0.3808,
+      0
+    ],
+    [
+      360.0,
+      365.0,
+      1.1221,
+      0.6855,
+      2.0,
+      0.6232,
+      0.4138,
+      0
+    ],
+    [
+      365.0,
+      370.0,
+      1.4444,
+      1.2417,
+      2.0,
+      0.5281,
+      0.6918,
+      0
+    ],
+    [
+      370.0,
+      375.0,
+      2.1241,
+      0.5823,
+      14.0,
+      0.9136,
+      0.2536,
+      0
+    ],
+    [
+      375.0,
+      380.0,
+      0.8011,
+      1.0072,
+      2.0,
+      0.5339,
+      0.6274,
+      0
+    ],
+    [
+      380.0,
+      385.0,
+      0.4755,
+      0.7905,
+      2.0,
+      0.4575,
+      0.7256,
+      0
+    ]
+  ],
+  "caution": "High delta power alone is nonspecific. Compare candidate with before/after, sustained evolution, rhythmicity, and artifact alternatives. A high change score is not a diagnosis."
+}

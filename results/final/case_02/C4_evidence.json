@@ -1,0 +1,705 @@
+{
+  "candidate_id": "C4",
+  "proposed_interval": [
+    485.0,
+    575.0
+  ],
+  "review_interval": [
+    425.0,
+    635.0
+  ],
+  "channel_selection": "Top4 leads by candidate median LL ratio * sqrt(RMS ratio), using adjacent before/after windows as background; no annotation involved.",
+  "channels": [
+    "P4-O2",
+    "P8-O2",
+    "P3-O1",
+    "P7-O1"
+  ],
+  "evidence_ids": {
+    "temporal": "C4.temporal",
+    "spectral": "C4.spectral",
+    "cross_channel": "C4.cross_channel"
+  },
+  "temporal": {
+    "local_ratios": {
+      "P4-O2": {
+        "rms_ratio": 1.7227,
+        "line_length_ratio": 2.2111
+      },
+      "P8-O2": {
+        "rms_ratio": 1.6223,
+        "line_length_ratio": 2.0066
+      },
+      "P3-O1": {
+        "rms_ratio": 1.4885,
+        "line_length_ratio": 1.8602
+      },
+      "P7-O1": {
+        "rms_ratio": 1.3641,
+        "line_length_ratio": 1.7991
+      }
+    }
+  },
+  "spectral": {
+    "before": {
+      "P4-O2": {
+        "rms_uv": 16.9165,
+        "line_length_uv_s": 1750.1404,
+        "delta_rel": 0.1572,
+        "theta_rel": 0.1,
+        "alpha_rel": 0.1337,
+        "beta_rel": 0.2914,
+        "gamma_rel": 0.2179,
+        "dominant_hz": 2.5,
+        "spectral_entropy": 0.9502,
+        "peak_fraction": 0.1522,
+        "kurtosis": 1.7318
+      },
+      "P8-O2": {
+        "rms_uv": 18.5681,
+        "line_length_uv_s": 2055.8259,
+        "delta_rel": 0.0961,
+        "theta_rel": 0.0717,
+        "alpha_rel": 0.1175,
+        "beta_rel": 0.3292,
+        "gamma_rel": 0.271,
+        "dominant_hz": 9.5,
+        "spectral_entropy": 0.9543,
+        "peak_fraction": 0.1558,
+        "kurtosis": 1.7431
+      },
+      "P3-O1": {
+        "rms_uv": 11.1853,
+        "line_length_uv_s": 871.4022,
+        "delta_rel": 0.3448,
+        "theta_rel": 0.1111,
+        "alpha_rel": 0.101,
+        "beta_rel": 0.1964,
+        "gamma_rel": 0.1374,
+        "dominant_hz": 3.0,
+        "spectral_entropy": 0.856,
+        "peak_fraction": 0.3585,
+        "kurtosis": 1.6842
+      },
+      "P7-O1": {
+        "rms_uv": 19.4678,
+        "line_length_uv_s": 1913.2848,
+        "delta_rel": 0.2862,
+        "theta_rel": 0.0808,
+        "alpha_rel": 0.0665,
+        "beta_rel": 0.2807,
+        "gamma_rel": 0.212,
+        "dominant_hz": 2.0,
+        "spectral_entropy": 0.9141,
+        "peak_fraction": 0.2673,
+        "kurtosis": 1.224
+      }
+    },
+    "during": {
+      "P4-O2": {
+        "rms_uv": 16.7246,
+        "line_length_uv_s": 1469.5002,
+        "delta_rel": 0.188,
+        "theta_rel": 0.0784,
+        "alpha_rel": 0.1167,
+        "beta_rel": 0.2842,
+        "gamma_rel": 0.2126,
+        "dominant_hz": 2.5,
+        "spectral_entropy": 0.9289,
+        "peak_fraction": 0.208,
+        "kurtosis": 1.4969
+      },
+      "P8-O2": {
+        "rms_uv": 16.7252,
+        "line_length_uv_s": 1601.2318,
+        "delta_rel": 0.2096,
+        "theta_rel": 0.0752,
+        "alpha_rel": 0.1249,
+        "beta_rel": 0.323,
+        "gamma_rel": 0.2217,
+        "dominant_hz": 2.5,
+        "spectral_entropy": 0.9453,
+        "peak_fraction": 0.1719,
+        "kurtosis": 1.6532
+      },
+      "P3-O1": {
+        "rms_uv": 12.3135,
+        "line_length_uv_s": 921.8223,
+        "delta_rel": 0.3919,
+        "theta_rel": 0.1155,
+        "alpha_rel": 0.0937,
+        "beta_rel": 0.2096,
+        "gamma_rel": 0.1209,
+        "dominant_hz": 2.5,
+        "spectral_entropy": 0.8531,
+        "peak_fraction": 0.3455,
+        "kurtosis": 1.6644
+      },
+      "P7-O1": {
+        "rms_uv": 16.7708,
+        "line_length_uv_s": 1357.3377,
+        "delta_rel": 0.401,
+        "theta_rel": 0.0896,
+        "alpha_rel": 0.0691,
+        "beta_rel": 0.2169,
+        "gamma_rel": 0.1451,
+        "dominant_hz": 2.0,
+        "spectral_entropy": 0.862,
+        "peak_fraction": 0.3038,
+        "kurtosis": 1.2865
+      }
+    },
+    "after": {
+      "P4-O2": {
+        "rms_uv": 7.1197,
+        "line_length_uv_s": 407.6041,
+        "delta_rel": 0.382,
+        "theta_rel": 0.1913,
+        "alpha_rel": 0.1187,
+        "beta_rel": 0.149,
+        "gamma_rel": 0.0322,
+        "dominant_hz": 2.25,
+        "spectral_entropy": 0.8288,
+        "peak_fraction": 0.3273,
+        "kurtosis": 0.4359
+      },
+      "P8-O2": {
+        "rms_uv": 7.4849,
+        "line_length_uv_s": 463.6181,
+        "delta_rel": 0.3918,
+        "theta_rel": 0.137,
+        "alpha_rel": 0.1846,
+        "beta_rel": 0.1716,
+        "gamma_rel": 0.0497,
+        "dominant_hz": 2.0,
+        "spectral_entropy": 0.851,
+        "peak_fraction": 0.2881,
+        "kurtosis": 0.5553
+      },
+      "P3-O1": {
+        "rms_uv": 6.1074,
+        "line_length_uv_s": 320.0215,
+        "delta_rel": 0.3802,
+        "theta_rel": 0.1663,
+        "alpha_rel": 0.1783,
+        "beta_rel": 0.1408,
+        "gamma_rel": 0.0314,
+        "dominant_hz": 2.0,
+        "spectral_entropy": 0.8264,
+        "peak_fraction": 0.2998,
+        "kurtosis": 0.8285
+      },
+      "P7-O1": {
+        "rms_uv": 8.6106,
+        "line_length_uv_s": 506.7861,
+        "delta_rel": 0.4825,
+        "theta_rel": 0.1229,
+        "alpha_rel": 0.1648,
+        "beta_rel": 0.1111,
+        "gamma_rel": 0.0406,
+        "dominant_hz": 2.0,
+        "spectral_entropy": 0.7911,
+        "peak_fraction": 0.3843,
+        "kurtosis": 0.2322
+      }
+    }
+  },
+  "cross_channel": {
+    "pairwise_correlations": [
+      {
+        "channels": [
+          "P4-O2",
+          "P8-O2"
+        ],
+        "before": 0.6846,
+        "during": 0.6573,
+        "after": 0.438,
+        "shared_electrode": true
+      },
+      {
+        "channels": [
+          "P4-O2",
+          "P3-O1"
+        ],
+        "before": 0.6738,
+        "during": 0.6645,
+        "after": 0.522,
+        "shared_electrode": false
+      },
+      {
+        "channels": [
+          "P4-O2",
+          "P7-O1"
+        ],
+        "before": 0.3345,
+        "during": 0.2473,
+        "after": -0.0576,
+        "shared_electrode": false
+      },
+      {
+        "channels": [
+          "P8-O2",
+          "P3-O1"
+        ],
+        "before": 0.4322,
+        "during": 0.3715,
+        "after": 0.092,
+        "shared_electrode": false
+      },
+      {
+        "channels": [
+          "P8-O2",
+          "P7-O1"
+        ],
+        "before": 0.3236,
+        "during": 0.2675,
+        "after": 0.1025,
+        "shared_electrode": false
+      },
+      {
+        "channels": [
+          "P3-O1",
+          "P7-O1"
+        ],
+        "before": 0.3775,
+        "during": 0.2689,
+        "after": 0.296,
+        "shared_electrode": true
+      }
+    ],
+    "caution": "Shared electrodes can create correlation. Correlation alone is not seizure evidence; focal seizures need not be globally synchronous."
+  },
+  "time_series_columns": [
+    "start",
+    "end",
+    "LL_ratio_p50",
+    "RMS_ratio_p50",
+    "dominant_hz_p50",
+    "entropy_p50",
+    "peak_fraction_p50",
+    "changed_selected_leads"
+  ],
+  "time_series": [
+    [
+      425.0,
+      430.0,
+      1.6945,
+      1.3507,
+      2.25,
+      0.8928,
+      0.2711,
+      0
+    ],
+    [
+      430.0,
+      435.0,
+      2.5761,
+      1.9907,
+      2.0,
+      0.9435,
+      0.1893,
+      4
+    ],
+    [
+      435.0,
+      440.0,
+      1.2506,
+      1.1019,
+      3.25,
+      0.8645,
+      0.3026,
+      0
+    ],
+    [
+      440.0,
+      445.0,
+      3.6756,
+      2.579,
+      23.5,
+      0.9616,
+      0.1513,
+      4
+    ],
+    [
+      445.0,
+      450.0,
+      1.4462,
+      1.11,
+      2.0,
+      0.909,
+      0.2547,
+      0
+    ],
+    [
+      450.0,
+      455.0,
+      2.1387,
+      1.4915,
+      6.0,
+      0.9404,
+      0.2043,
+      2
+    ],
+    [
+      455.0,
+      460.0,
+      2.3095,
+      1.6936,
+      2.25,
+      0.9244,
+      0.197,
+      3
+    ],
+    [
+      460.0,
+      465.0,
+      2.6615,
+      2.0587,
+      2.25,
+      0.9289,
+      0.2131,
+      4
+    ],
+    [
+      465.0,
+      470.0,
+      2.9162,
+      1.8221,
+      2.75,
+      0.9486,
+      0.2032,
+      3
+    ],
+    [
+      470.0,
+      475.0,
+      2.6781,
+      1.6582,
+      3.25,
+      0.9031,
+      0.2958,
+      3
+    ],
+    [
+      475.0,
+      480.0,
+      2.6732,
+      1.4344,
+      16.0,
+      0.9501,
+      0.1483,
+      2
+    ],
+    [
+      480.0,
+      485.0,
+      2.7143,
+      1.8268,
+      4.5,
+      0.928,
+      0.1804,
+      3
+    ],
+    [
+      485.0,
+      490.0,
+      2.7923,
+      1.7784,
+      2.5,
+      0.9227,
+      0.2203,
+      3
+    ],
+    [
+      490.0,
+      495.0,
+      2.2535,
+      1.728,
+      2.75,
+      0.907,
+      0.2844,
+      2
+    ],
+    [
+      495.0,
+      500.0,
+      2.2412,
+      1.7205,
+      2.5,
+      0.9487,
+      0.1854,
+      2
+    ],
+    [
+      500.0,
+      505.0,
+      2.7609,
+      2.2374,
+      2.5,
+      0.8276,
+      0.4026,
+      4
+    ],
+    [
+      505.0,
+      510.0,
+      3.0942,
+      1.937,
+      2.0,
+      0.9197,
+      0.2147,
+      3
+    ],
+    [
+      510.0,
+      515.0,
+      1.904,
+      1.4439,
+      2.0,
+      0.893,
+      0.2778,
+      2
+    ],
+    [
+      515.0,
+      520.0,
+      1.9723,
+      1.6787,
+      2.25,
+      0.9321,
+      0.2327,
+      2
+    ],
+    [
+      520.0,
+      525.0,
+      1.7569,
+      1.4334,
+      2.5,
+      0.8991,
+      0.2447,
+      1
+    ],
+    [
+      525.0,
+      530.0,
+      2.1509,
+      1.6976,
+      2.0,
+      0.9302,
+      0.2076,
+      3
+    ],
+    [
+      530.0,
+      535.0,
+      1.0858,
+      1.2847,
+      2.0,
+      0.808,
+      0.2983,
+      0
+    ],
+    [
+      535.0,
+      540.0,
+      1.4467,
+      1.2623,
+      2.5,
+      0.8588,
+      0.3735,
+      0
+    ],
+    [
+      540.0,
+      545.0,
+      1.7735,
+      1.4872,
+      2.0,
+      0.9254,
+      0.2118,
+      0
+    ],
+    [
+      545.0,
+      550.0,
+      1.2221,
+      1.257,
+      2.0,
+      0.8541,
+      0.3554,
+      0
+    ],
+    [
+      550.0,
+      555.0,
+      1.7912,
+      1.4525,
+      2.75,
+      0.9103,
+      0.2958,
+      2
+    ],
+    [
+      555.0,
+      560.0,
+      3.6505,
+      2.5486,
+      15.75,
+      0.9329,
+      0.1662,
+      4
+    ],
+    [
+      560.0,
+      565.0,
+      2.6956,
+      2.2503,
+      17.5,
+      0.9175,
+      0.2108,
+      4
+    ],
+    [
+      565.0,
+      570.0,
+      0.6602,
+      0.7473,
+      2.0,
+      0.8311,
+      0.3204,
+      0
+    ],
+    [
+      570.0,
+      575.0,
+      0.6684,
+      0.7265,
+      2.5,
+      0.842,
+      0.3756,
+      0
+    ],
+    [
+      575.0,
+      580.0,
+      0.5794,
+      0.6736,
+      6.0,
+      0.8357,
+      0.3265,
+      0
+    ],
+    [
+      580.0,
+      585.0,
+      0.6804,
+      0.7892,
+      2.5,
+      0.8585,
+      0.3317,
+      0
+    ],
+    [
+      585.0,
+      590.0,
+      0.7073,
+      0.7828,
+      2.0,
+      0.8524,
+      0.2964,
+      0
+    ],
+    [
+      590.0,
+      595.0,
+      0.6825,
+      0.7521,
+      2.0,
+      0.8434,
+      0.3174,
+      0
+    ],
+    [
+      595.0,
+      600.0,
+      0.6265,
+      0.7253,
+      2.25,
+      0.8309,
+      0.3084,
+      0
+    ],
+    [
+      600.0,
+      605.0,
+      0.6737,
+      0.8107,
+      2.0,
+      0.8203,
+      0.2624,
+      0
+    ],
+    [
+      605.0,
+      610.0,
+      0.5597,
+      0.6866,
+      2.0,
+      0.827,
+      0.3265,
+      0
+    ],
+    [
+      610.0,
+      615.0,
+      0.5143,
+      0.6757,
+      2.25,
+      0.7898,
+      0.3101,
+      0
+    ],
+    [
+      615.0,
+      620.0,
+      0.5029,
+      0.679,
+      2.25,
+      0.765,
+      0.3978,
+      0
+    ],
+    [
+      620.0,
+      625.0,
+      0.6482,
+      0.8268,
+      2.0,
+      0.7795,
+      0.3859,
+      0
+    ],
+    [
+      625.0,
+      630.0,
+      0.6273,
+      0.7712,
+      2.0,
+      0.8385,
+      0.2949,
+      0
+    ],
+    [
+      630.0,
+      635.0,
+      0.5806,
+      0.7055,
+      2.25,
+      0.7933,
+      0.3939,
+      0
+    ]
+  ],
+  "caution": "High delta power alone is nonspecific. Compare candidate with before/after, sustained evolution, rhythmicity, and artifact alternatives. A high change score is not a diagnosis."
+}

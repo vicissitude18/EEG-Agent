@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "run": "fixed",
+      "cases": 6,
+      "complete_scans": 6,
+      "candidate_count": 22,
+      "invalid_calls": 0,
+      "status": "passed"
+    },
+    {
+      "run": "final",
+      "cases": 6,
+      "complete_scans": 6,
+      "candidate_count": 22,
+      "invalid_calls": 0,
+      "status": "passed"
+    }
+  ],
+  "note": "Evidence existence, provenance and policy accounting checked. Does not certify medical correctness of model explanations."
+}

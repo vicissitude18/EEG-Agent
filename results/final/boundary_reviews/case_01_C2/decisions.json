@@ -1,0 +1,100 @@
+[
+  {
+    "candidate_id": "C2",
+    "decision": "uncertain",
+    "onset_sec": 160.0,
+    "offset_sec": 305.0,
+    "temporal_evidence_id": "C2.temporal",
+    "spectral_evidence_id": "C2.spectral",
+    "cross_channel_evidence_id": "C2.cross_channel",
+    "temporal_reason": "The temporal evidence shows a sustained increase in RMS and line-length ratios across the channels CZ-PZ, P8-O2, C4-P4, and P4-O2 during the interval [160.0, 305.0]. The RMS ratio increased from 1.4 to 2.1899, and the line-length ratio increased from 1.7 to 1.7634. However, the support is not consistent throughout the entire interval, with some periods showing a decrease in ratios. The temporal evidence does not show a clear and sustained evolution that would support a seizure.",
+    "spectral_reason": "The spectral evidence shows a shift in the dominant frequency from 16.0 Hz to 2.5 Hz during the interval [160.0, 305.0]. The delta relative power increased from 0.0493 to 0.3604, and the theta relative power increased from 0.0582 to 0.1736. However, the spectral changes are not consistent throughout the interval, with some periods showing a decrease in delta and theta relative power. The spectral evidence does not show a clear and sustained evolution that would support a seizure.",
+    "cross_channel_reason": "The cross-channel evidence shows an increase in pairwise correlations between the channels CZ-PZ, P8-O2, C4-P4, and P4-O2 during the interval [160.0, 305.0]. The pairwise correlations increased from -0.0442 to 0.0497, and the shared electrodes can create correlation. However, the cross-channel evidence does not show a clear and sustained evolution that would support a seizure.",
+    "evolution_supported": false,
+    "context_contrast": false,
+    "artifact_suspected": false,
+    "alternative_explanation": "The changes observed in the temporal, spectral, and cross-channel evidence could be due to physiological state changes or artifacts. The evidence does not show a clear and sustained evolution that would support a seizure, and the changes are not consistent throughout the entire interval.",
+    "evidence_file": "C2_evidence.json",
+    "proposed_interval": [
+      160.0,
+      305.0
+    ],
+    "review_interval": [
+      100.0,
+      365.0
+    ],
+    "origin": "fixed_broad_change_screen",
+    "measurement_support": {
+      "policy": {
+        "min_line_length_ratio": 2.0,
+        "min_rms_ratio": 1.5,
+        "min_changed_leads": 2,
+        "min_peak_fraction": 0.2,
+        "max_entropy": 0.85,
+        "min_consecutive_support_sec": 15.0,
+        "min_support_fraction": 0.2,
+        "minimum_model_interval_sec": 10.0
+      },
+      "meets_minimum_measurement_support": true,
+      "longest_support_run_sec": 35.0,
+      "total_support_sec": 40.0,
+      "support_fraction": 0.2759,
+      "support_bins": [
+        [
+          200.0,
+          205.0
+        ],
+        [
+          210.0,
+          215.0
+        ],
+        [
+          215.0,
+          220.0
+        ],
+        [
+          220.0,
+          225.0
+        ],
+        [
+          225.0,
+          230.0
+        ],
+        [
+          230.0,
+          235.0
+        ],
+        [
+          235.0,
+          240.0
+        ],
+        [
+          240.0,
+          245.0
+        ]
+      ],
+      "allowed_decisions": [
+        "suspected",
+        "rejected",
+        "uncertain"
+      ],
+      "meaning": "A fixed engineering evidence-sufficiency check, not seizure truth. Passing does not establish a seizure; failure can occur in real focal/low-amplitude events. Rejected and uncertain candidates remain visible."
+    },
+    "raw_model_assessment": {
+      "candidate_id": "C2",
+      "decision": "uncertain",
+      "onset_sec": 160.0,
+      "offset_sec": 305.0,
+      "temporal_evidence_id": "C2.temporal",
+      "spectral_evidence_id": "C2.spectral",
+      "cross_channel_evidence_id": "C2.cross_channel",
+      "temporal_reason": "The temporal evidence shows a sustained increase in RMS and line-length ratios across the channels CZ-PZ, P8-O2, C4-P4, and P4-O2 during the interval [160.0, 305.0]. The RMS ratio increased from 1.4 to 2.1899, and the line-length ratio increased from 1.7 to 1.7634. However, the support is not consistent throughout the entire interval, with some periods showing a decrease in ratios. The temporal evidence does not show a clear and sustained evolution that would support a seizure.",
+      "spectral_reason": "The spectral evidence shows a shift in the dominant frequency from 16.0 Hz to 2.5 Hz during the interval [160.0, 305.0]. The delta relative power increased from 0.0493 to 0.3604, and the theta relative power increased from 0.0582 to 0.1736. However, the spectral changes are not consistent throughout the interval, with some periods showing a decrease in delta and theta relative power. The spectral evidence does not show a clear and sustained evolution that would support a seizure.",
+      "cross_channel_reason": "The cross-channel evidence shows an increase in pairwise correlations between the channels CZ-PZ, P8-O2, C4-P4, and P4-O2 during the interval [160.0, 305.0]. The pairwise correlations increased from -0.0442 to 0.0497, and the shared electrodes can create correlation. However, the cross-channel evidence does not show a clear and sustained evolution that would support a seizure.",
+      "evolution_supported": false,
+      "context_contrast": false,
+      "artifact_suspected": false,
+      "alternative_explanation": "The changes observed in the temporal, spectral, and cross-channel evidence could be due to physiological state changes or artifacts. The evidence does not show a clear and sustained evolution that would support a seizure, and the changes are not consistent throughout the entire interval."
+    }
+  }
+]
